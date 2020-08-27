@@ -1,0 +1,167 @@
+﻿<UserControl x:Class="LedClock.LedClockC"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Height="40" Width="250">
+    <!--<Border x:Name="masterBorder" BorderThickness="3" BorderBrush="Black" CornerRadius="10" Padding="5">-->
+    <Grid Name="g" Background="Transparent">
+        <Grid.Resources>
+            <GeometryGroup x:Key="p00">
+                <PathGeometry Figures="M 1,0 L 49,0 39,10 11,10 Z" />
+                <PathGeometry Figures="M 0,1 L 0,44 10,39 10,11 Z" />
+                <PathGeometry Figures="M 50,1 L 50,44 40,39 40,11 Z" />
+                <PathGeometry Figures="M 0,46 L 0,89 10,79 10,51 Z" />
+                <PathGeometry Figures="M 50,46 L 50,89 40,79 40,51 Z" />
+                <PathGeometry Figures="M 1,90 L 49,90 39,80 11,80 Z" />
+            </GeometryGroup>
+            <GeometryGroup x:Key="p01">
+                <PathGeometry Figures="M 50,1 L 50,44 40,39 40,11 Z" />
+                <PathGeometry Figures="M 50,46 L 50,89 40,79 40,51 Z" />
+            </GeometryGroup>
+            <GeometryGroup x:Key="p02">
+                <PathGeometry Figures="M 1,0 L 49,0 39,10 11,10 Z" />
+                <PathGeometry Figures="M 50,1 L 50,44 40,39 40,11 Z" />
+                <PathGeometry Figures="M 1,45 L 11,40 39,40 49,45 39,50 11,50 Z" />
+                <PathGeometry Figures="M 0,46 L 0,89 10,79 10,51 Z" />
+                <PathGeometry Figures="M 1,90 L 49,90 39,80 11,80 Z" />
+            </GeometryGroup>
+            <GeometryGroup x:Key="p03">
+                <PathGeometry Figures="M 1,0 L 49,0 39,10 11,10 Z" />
+                <PathGeometry Figures="M 50,1 L 50,44 40,39 40,11 Z" />
+                <PathGeometry Figures="M 1,45 L 11,40 39,40 49,45 39,50 11,50 Z" />
+                <PathGeometry Figures="M 50,46 L 50,89 40,79 40,51 Z" />
+                <PathGeometry Figures="M 1,90 L 49,90 39,80 11,80 Z" />
+            </GeometryGroup>
+            <GeometryGroup x:Key="p04">
+                <PathGeometry Figures="M 0,1 L 0,44 10,39 10,11 Z" />
+                <PathGeometry Figures="M 50,1 L 50,44 40,39 40,11 Z" />
+                <PathGeometry Figures="M 1,45 L 11,40 39,40 49,45 39,50 11,50 Z" />
+                <PathGeometry Figures="M 50,46 L 50,89 40,79 40,51 Z" />
+            </GeometryGroup>
+            <GeometryGroup x:Key="p05">
+                <PathGeometry Figures="M 1,0 L 49,0 39,10 11,10 Z" />
+                <PathGeometry Figures="M 0,1 L 0,44 10,39 10,11 Z" />
+                <PathGeometry Figures="M 1,45 L 11,40 39,40 49,45 39,50 11,50 Z" />
+                <PathGeometry Figures="M 50,46 L 50,89 40,79 40,51 Z" />
+                <PathGeometry Figures="M 1,90 L 49,90 39,80 11,80 Z" />
+            </GeometryGroup>
+            <GeometryGroup x:Key="p06">
+                <PathGeometry Figures="M 1,0 L 49,0 39,10 11,10 Z" />
+                <PathGeometry Figures="M 0,1 L 0,44 10,39 10,11 Z" />
+                <PathGeometry Figures="M 1,45 L 11,40 39,40 49,45 39,50 11,50 Z" />
+                <PathGeometry Figures="M 0,46 L 0,89 10,79 10,51 Z" />
+                <PathGeometry Figures="M 50,46 L 50,89 40,79 40,51 Z" />
+                <PathGeometry Figures="M 1,90 L 49,90 39,80 11,80 Z" />
+            </GeometryGroup>
+            <GeometryGroup x:Key="p07">
+                <PathGeometry Figures="M 1,0 L 49,0 39,10 11,10 Z" />
+                <PathGeometry Figures="M 50,1 L 50,44 40,39 40,11 Z" />
+                <PathGeometry Figures="M 50,46 L 50,89 40,79 40,51 Z" />
+            </GeometryGroup>
+            <GeometryGroup x:Key="p08">
+                <PathGeometry Figures="M 1,0 L 49,0 39,10 11,10 Z" />
+                <PathGeometry Figures="M 0,1 L 0,44 10,39 10,11 Z" />
+                <PathGeometry Figures="M 50,1 L 50,44 40,39 40,11 Z" />
+                <PathGeometry Figures="M 1,45 L 11,40 39,40 49,45 39,50 11,50 Z" />
+                <PathGeometry Figures="M 0,46 L 0,89 10,79 10,51 Z" />
+                <PathGeometry Figures="M 50,46 L 50,89 40,79 40,51 Z" />
+                <PathGeometry Figures="M 1,90 L 49,90 39,80 11,80 Z" />
+            </GeometryGroup>
+            <GeometryGroup x:Key="p09">
+                <PathGeometry Figures="M 1,0 L 49,0 39,10 11,10 Z" />
+                <PathGeometry Figures="M 0,1 L 0,44 10,39 10,11 Z" />
+                <PathGeometry Figures="M 50,1 L 50,44 40,39 40,11 Z" />
+                <PathGeometry Figures="M 1,45 L 11,40 39,40 49,45 39,50 11,50 Z" />
+                <PathGeometry Figures="M 50,46 L 50,89 40,79 40,51 Z" />
+                <PathGeometry Figures="M 1,90 L 49,90 39,80 11,80 Z" />
+            </GeometryGroup>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="0.6*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="0.6*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10" />
+
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="0.3*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="0.3*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <!--年-->
+        <Viewbox Grid.Column="0">
+            <Path Name="p00" Fill="#fff" Data="{StaticResource ResourceKey=p00}" Margin="2 0"/>
+        </Viewbox>
+        <Viewbox Grid.Column="1">
+            <Path Name="p11" Fill="#fff" Data="{StaticResource ResourceKey=p00}" Margin="2 0"/>
+        </Viewbox>
+        <Viewbox Grid.Column="2">
+            <Path Name="p22" Fill="#fff" Data="{StaticResource ResourceKey=p00}" Margin="2 0"/>
+        </Viewbox>
+        <Viewbox Grid.Column="3">
+            <Path Name="p33" Fill="#fff" Data="{StaticResource ResourceKey=p00}" Margin="2 0"/>
+        </Viewbox>
+        <Viewbox Grid.Column="4" VerticalAlignment="Center" Margin="1 0">
+            <Path Name="d4" Fill="#fff" Data="M 1,45 L 11,40 39,40 49,45 39,50 11,50 Z" Margin="0 0 0 35"/>
+        </Viewbox>
+        <!--月-->
+        <Viewbox Grid.Column="5">
+            <Path Name="p55" Fill="#fff" Data="{StaticResource ResourceKey=p00}" Margin="2 0"/>
+        </Viewbox>
+        <Viewbox Grid.Column="6">
+            <Path Name="p66" Fill="#fff" Data="{StaticResource ResourceKey=p00}" Margin="2 0"/>
+        </Viewbox>
+        <Viewbox Grid.Column="7" VerticalAlignment="Center" Margin="1 0">
+            <Path Name="d5" Fill="#fff" Data="M 1,45 L 11,40 39,40 49,45 39,50 11,50 Z" Margin="0 0 0 35"/>
+        </Viewbox>
+        <!--日-->
+        <Viewbox Grid.Column="8">
+            <Path Name="p88" Fill="#fff" Data="{StaticResource ResourceKey=p00}" Margin="2 0"/>
+        </Viewbox>
+        <Viewbox Grid.Column="9">
+            <Path Name="p99" Fill="#fff" Data="{StaticResource ResourceKey=p00}" Margin="2 0"/>
+        </Viewbox>
+        <!--时-->
+        <Viewbox Grid.Column="11">
+            <Path Name="p0" Fill="#fff" Data="{StaticResource ResourceKey=p00}" Margin="2 0"/>
+        </Viewbox>
+        <Viewbox Grid.Column="12">
+            <Path Name="p1" Fill="#fff" Data="{StaticResource ResourceKey=p00}" Margin="2 0"/>
+        </Viewbox>
+        <!--点-->
+        <Grid Grid.Column="13">
+            <Rectangle Fill="#fff" Name="d0" Width="5" Height="5" Margin="0 0 0 10"/>
+            <Rectangle Fill="#fff" Name="d1" Width="5" Height="5" Margin="0 10 0 0"/>
+        </Grid>
+        <!--分-->
+        <Viewbox Grid.Column="14">
+            <Path Name="p3" Fill="#fff" Data="{StaticResource ResourceKey=p00}" Margin="2 0"/>
+        </Viewbox>
+        <Viewbox Grid.Column="15">
+            <Path Name="p4" Fill="#fff" Data="{StaticResource ResourceKey=p00}" Margin="2 0"/>
+        </Viewbox>
+        <!--点-->
+        <Grid x:Name="ptMin" Grid.Column="16">
+            <Rectangle Fill="#fff" Name="d2" Width="5" Height="5" Margin="0 0 0 10"/>
+            <Rectangle Fill="#fff" Name="d3" Width="5" Height="5" Margin="0 10 0 0"/>
+        </Grid>
+        <!--秒-->
+        <Viewbox x:Name="v1" Grid.Column="17">
+            <Path Name="p6" Fill="#fff" Data="{StaticResource ResourceKey=p00}" Margin="2 0"/>
+        </Viewbox>
+        <Viewbox x:Name="v2" Grid.Column="18">
+            <Path Name="p7" Fill="#fff" Data="{StaticResource ResourceKey=p00}" Margin="2 0"/>
+        </Viewbox>
+    </Grid>
+    <!--</Border>-->
+</UserControl>

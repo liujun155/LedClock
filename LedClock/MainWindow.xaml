@@ -1,0 +1,12 @@
+﻿<Window x:Class="LedClock.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LedClock"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="160" Width="350">
+    <Grid Background="DeepSkyBlue">
+        <local:LedClockC x:Name="ledClockC1" DotBrush="#FFD47272" DigitBrush="#FF5158B1" HideSecond="False" />
+    </Grid>
+</Window>
