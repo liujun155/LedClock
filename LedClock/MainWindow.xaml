@@ -6,7 +6,16 @@
         xmlns:local="clr-namespace:LedClock"
         mc:Ignorable="d"
         Title="MainWindow" Height="160" Width="350">
-    <Grid Background="DeepSkyBlue">
+    <Grid Name="MainGrid" Background="DeepSkyBlue">
         <local:LedClockC x:Name="ledClockC1" DotBrush="#FFD47272" DigitBrush="#FF5158B1" HideSecond="False" />
+        <!--<Popup x:Name="popTitle" VerticalOffset="70" PlacementTarget="{Binding ElementName=MainGrid}" Placement="Top" IsOpen="True" StaysOpen="True"
+                    AllowsTransparency="True">
+            <Grid Height="70" Width="{Binding ElementName=mainWindow,Path=ActualWidth}">
+                <Border VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20 23 0 0" Background="#192E5E" Padding="15 0" CornerRadius="3"
+                        BorderThickness="1" BorderBrush="#7F97C3">
+                    <local:LedClockC x:Name="ledClockC1" DotBrush="#fff" DigitBrush="#fff" HideSecond="False" />
+                </Border>
+            </Grid>
+        </Popup>-->
     </Grid>
 </Window>
